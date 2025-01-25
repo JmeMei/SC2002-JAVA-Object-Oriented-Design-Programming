@@ -1,3 +1,4 @@
+//hi 
 package lab1;
 
 import java.util.Scanner;
@@ -5,6 +6,7 @@ import java.util.Scanner;
 public class P1 {
 
 	public static void main(String[] args) {
+		//checking whether pushed
 		// TODO Auto-generated method stub
 		System.out.println("Which movie fan are you?");
 		System.out.println("A/a: Action movie");
