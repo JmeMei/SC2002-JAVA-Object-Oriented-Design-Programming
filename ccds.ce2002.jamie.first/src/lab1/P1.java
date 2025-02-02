@@ -1,4 +1,4 @@
-//hi 
+//just cchecking
 package lab1;
 
 import java.util.Scanner;
