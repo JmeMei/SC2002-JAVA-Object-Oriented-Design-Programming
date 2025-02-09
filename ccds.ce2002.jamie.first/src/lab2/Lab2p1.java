@@ -7,7 +7,7 @@ public class Lab2p1 {
 	public static void main(String[] args) 
 	{ 
 		int choice; 
-		int m, n, result;
+		int m, n, result, digit;
 		Scanner sc = new Scanner (System.in);
 		do { 
 			System.out.println("Perform the following methods:"); 
@@ -53,8 +53,24 @@ public class Lab2p1 {
 					
 					break; 
 				case 5: /* add position() call */ 
+					System.out.print("n =");
+					n = sc.nextInt();
+					
+					System.out.print("digit: ");
+					digit = sc.nextInt();
+					
+					System.out.println("position = " + position(n, digit));
+					
 					break;  
 				case 6: /* add extractOddDigits() call */ 
+					System.out.print("n =");
+					long e = sc.nextInt();
+					
+					if(e<0)
+						System.out.println("oddDigits = Error input!!");
+					else
+						System.out.println("oddDigits = "+extractOddDigits(e));
+					
 					break;  
 				case 7: System.out.println("Program terminating …."); 
 			}  
@@ -109,9 +125,37 @@ public class Lab2p1 {
 		
 	} 
 
-	////countDigits//////
+	////countDigits///
 	public static int countDigits(int n) {
 		return (int) (Math.log10(n) + 1);
 	}
+	
+////position//////
+	public static int position(int n, int digit) {
+		String nString = Integer.toString(n); //to convert the number into string 
+		
+		//i is the length of the string (user input number)
+		//starts from the right hand side so i decrements
+		for(int i = nString.length() -1 ; i >= 0; i--) { 
+			if(nString.charAt(i) == (char) (digit + '0')) { //(char) (digit + '0') to convert an integer digit to its corresponding char rep.
+				return nString.length() - i; // Convert index to position (right to left)
+			}
+		}
+		return -1;
+	}
+	
+/////extractOddDigits()////
 
+	public static long extractOddDigits(long n) {
+		int result = 0;
+		int currentPos = 0;
+		while(n > 0) {
+			if ( (n % 10) % 2 == 1) { //n%10 extracts the last digit, and %2 == 1 checks if its odd
+				result += (n % 10) * Math.pow(10, currentPos); //to extract the last digit and put it at the correct decimal position
+				currentPos++; //position of the placed digit
+			}
+			n = n / 10; // removes the right most digit from e
+		}
+		return (result == 0)? -1 : result;
+	}
 }
