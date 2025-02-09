@@ -45,6 +45,12 @@ public class Lab2p1 {
 					System.out.println(String.format("%d %% %d= %d", m,n, result));
 					break;  
 				case 4: /* add countDigits() call */ 
+					System.out.print("n =");
+					n = sc.nextInt();
+					
+					if(n<0) System.out.println("Error Input!!!");
+					else System.out.println("Count = " + countDigits(n));
+					
 					break; 
 				case 5: /* add position() call */ 
 					break;  
@@ -103,6 +109,9 @@ public class Lab2p1 {
 		
 	} 
 
-
+	////countDigits//////
+	public static int countDigits(int n) {
+		return (int) (Math.log10(n) + 1);
+	}
 
 }
