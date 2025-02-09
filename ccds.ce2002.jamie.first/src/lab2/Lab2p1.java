@@ -23,6 +23,15 @@ public class Lab2p1 {
 					mulTest();
 					break; 
 				case 2: /* add divide() call */ 
+					System.out.print("m =");
+					int m = sc.nextInt();
+					
+					System.out.print("n =");
+					int n = sc.nextInt();
+					
+					int result = divide( m,  n);
+					System.out.println(String.format("% d/%d = %d", m,n, result));
+					
 					break;  
 				case 3: /* add modulus() call */ 
 					break;  
@@ -60,4 +69,38 @@ public class Lab2p1 {
 		}
 		System.out.printf("%d answers out of 5 are correct", correctCounter);
 	}
+	
+	public static int divide(int m, int n) {
+		int counter = 0;
+		
+		while (m >= n) {
+			m -= n;
+			counter++;
+		}
+		
+		return counter;
+	}
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
