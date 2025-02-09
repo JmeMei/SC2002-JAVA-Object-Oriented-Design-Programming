@@ -7,6 +7,7 @@ public class Lab2p1 {
 	public static void main(String[] args) 
 	{ 
 		int choice; 
+		int m, n, result;
 		Scanner sc = new Scanner (System.in);
 		do { 
 			System.out.println("Perform the following methods:"); 
@@ -24,16 +25,24 @@ public class Lab2p1 {
 					break; 
 				case 2: /* add divide() call */ 
 					System.out.print("m =");
-					int m = sc.nextInt();
+					m = sc.nextInt();
 					
 					System.out.print("n =");
-					int n = sc.nextInt();
+					n = sc.nextInt();
 					
-					int result = divide( m,  n);
-					System.out.println(String.format("% d/%d = %d", m,n, result));
+					result = divide(m, n);
+					System.out.println(String.format("%d / %d = %d", m,n, result));
 					
 					break;  
 				case 3: /* add modulus() call */ 
+					System.out.print("m =");
+					m = sc.nextInt();
+					
+					System.out.print("n =");
+					n = sc.nextInt();
+					
+					result = modulus(m, n);
+					System.out.println(String.format("%d %% %d= %d", m,n, result));
 					break;  
 				case 4: /* add countDigits() call */ 
 					break; 
@@ -44,8 +53,10 @@ public class Lab2p1 {
 				case 7: System.out.println("Program terminating …."); 
 			}  
 		} while (choice < 7); 
+		sc.close();
 	} 
 		/* add method code here */ 
+	//////MULTEST FUNCTION//////////
 	public static void mulTest() {
 		Scanner sc = new Scanner(System.in);
 		int digit1, digit2, answer, correctCounter=0;
@@ -68,8 +79,10 @@ public class Lab2p1 {
 			if(answer == digit1 * digit2) correctCounter++;
 		}
 		System.out.printf("%d answers out of 5 are correct", correctCounter);
+		sc.close();
 	}
 	
+	//////divide FUNCTION//////////
 	public static int divide(int m, int n) {
 		int counter = 0;
 		
@@ -80,27 +93,16 @@ public class Lab2p1 {
 		
 		return counter;
 	}
-} 
+	
+	/////modolus////////
+	public static int modulus(int m, int n) {
+		while (m >= n) { // Keep subtracting n until m is less than n
+	        m -= n;
+	    }
+	    return m; // Return the remainder
+		
+	} 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
