@@ -1,6 +1,7 @@
 package lab3;
 
 import java.util.Scanner;
+
 public class PlaneApp {
 	public static void main(String[] args) {
 		System.out.println("(1) Show number of empty seats");
