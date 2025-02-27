@@ -17,10 +17,12 @@ public class Plane {
 	
 	private PlaneSeat[] sortSeats() {
 		PlaneSeat[] seatSorted= seat.clone();
-		Arrays.sort(seatSorted, new Comparator<PlaneSeat>() {
+		Arrays.sort(seatSorted, new Comparator<PlaneSeat>() { //comparator to define custom sorting rules
 			@Override
 			public int compare(PlaneSeat o1, PlaneSeat o2) {
 				return o1.getCustomerID()- o2.getCustomerID();
+				
+				//compare returns -ve/0/+ve 
 			}
 	    });
 
@@ -32,7 +34,9 @@ public class Plane {
 	}
 	
 	public void showEmptySeats() {
-		for(PlaneSeat ps: this.seat) {
+		//for(PlaneSeat ps: this.seat) {
+		for (int i = 0; i < this.seat.length; i++) {
+		    PlaneSeat ps = this.seat[i];  // Get the current PlaneSeat object
 			if(!ps.isOccupied()) {
 				System.out.println(String.format("SeatID: %d", ps.getSeatID()));
 			}

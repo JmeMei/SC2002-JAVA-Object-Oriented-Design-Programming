@@ -36,7 +36,7 @@ public class PlaneApp {
 				break;
 			case 5:
 				System.out.println("Assigning Seat...");
-				System.out.print("Plese enter SeatID: ");
+				System.out.print("Please enter SeatID: ");
 				int seatid=sc.nextInt();
 				System.out.print("Plese enter CustomerID: ");
 				int cust_id=sc.nextInt();
