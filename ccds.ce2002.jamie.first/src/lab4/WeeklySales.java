@@ -28,5 +28,12 @@ public class WeeklySales
 
 		for (SalePerson s : salesStaff)
 			System.out.println (s);
+		
+		/* 
+		 For loop equivalent to 
+		 for (int i = 0; i < salesStaff.length; i++) {
+    	 	System.out.println(salesStaff[i]);
+		 }
+		*/
 	}
 }
