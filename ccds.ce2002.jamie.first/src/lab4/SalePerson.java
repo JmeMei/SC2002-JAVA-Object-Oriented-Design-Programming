@@ -6,10 +6,10 @@ public class SalePerson implements Comparable {
 	private String lastName;
 	private int totalSales;
 
-	public SalePerson(String fName, String lName, int tSales) {
-		this.firstName=fName;
-		this.lastName=lName;
-		this.totalSales=tSales;
+	public SalePerson(String firstName, String lastName, int totalSales) {
+		this.firstName=firstName;
+		this.lastName=lastName;
+		this.totalSales=totalSales;
 	}
 
 	public String getFirstNme() {
@@ -29,12 +29,9 @@ public class SalePerson implements Comparable {
 	}
 
 	public boolean equals(Object o) {
-		// Check if o is a saleperson obj
-		if(o.getClass() == this.getClass()) {
+		if(o instanceof SalePerson) { // Check if o is a saleperson obj , to avoid runtime error
 			SalePerson sp = (SalePerson)o;
-			/* checks if the first name and last name of both obj matches
-			* if it does, return true
-			* */
+			/* checks if the first name and last name of both obj matches, if it does, return true */
 			return (this.firstName == sp.getFirstNme() && this.lastName == sp.getLastName());
 		}
 		return false;
@@ -42,7 +39,7 @@ public class SalePerson implements Comparable {
 
 	@Override
 	public int compareTo(Object o) {
-		if(o.getClass() == this.getClass()) {
+		if(o instanceof SalePerson) {
 			SalePerson sp = (SalePerson)o;
 			if(this.totalSales == sp.getTotalSales())
 				return this.lastName.compareTo(sp.getLastName());
