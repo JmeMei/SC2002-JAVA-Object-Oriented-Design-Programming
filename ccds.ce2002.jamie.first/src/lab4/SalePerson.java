@@ -1,4 +1,4 @@
-package lab5;
+package lab4;
 
 @SuppressWarnings("rawtypes")
 public class SalePerson implements Comparable {
