@@ -1,6 +1,6 @@
 package lab4_part2;
 
-public class Cylinder {
+public class Cylinder implements Shape{
 	private Circle circle;
 	private Rectangle rectangle;
 	

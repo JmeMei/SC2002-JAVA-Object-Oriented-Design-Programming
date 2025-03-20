@@ -1,6 +1,6 @@
 package lab4_part2;
 
-public class Sphere {
+public class Sphere implements Shape{
 	private Circle circle;
 	
 	public Sphere() {

@@ -1,6 +1,6 @@
 package lab4_part2;
 
-public class Pyramid {
+public class Pyramid implements Shape{
 	private Triangle triangle;
 	
 	public Pyramid() {

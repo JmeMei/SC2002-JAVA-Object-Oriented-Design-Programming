@@ -1,6 +1,6 @@
 package lab4_part2;
 
-public class Cube {
+public class Cube implements Shape{
 private Square square; //not a subclass of square but it has a composition relationship
 //cube has sides of square
 	

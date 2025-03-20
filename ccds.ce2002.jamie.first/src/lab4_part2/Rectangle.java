@@ -1,6 +1,6 @@
 package lab4_part2;
 
-public class Rectangle {
+public class Rectangle implements Shape{
 	private double length;
 	private double breadth;
 	

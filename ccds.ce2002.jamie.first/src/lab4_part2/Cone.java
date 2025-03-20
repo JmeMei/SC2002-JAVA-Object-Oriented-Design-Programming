@@ -1,6 +1,6 @@
 package lab4_part2;
 
-public class Cone {
+public class Cone implements Shape{
 	private Circle circle;
 	private Triangle triangle;
 	

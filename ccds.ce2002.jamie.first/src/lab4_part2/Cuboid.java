@@ -1,6 +1,6 @@
 package lab4_part2;
 
-public class Cuboid {
+public class Cuboid implements Shape{
 	private Rectangle rectangle;
 	
 	public Cuboid() {
