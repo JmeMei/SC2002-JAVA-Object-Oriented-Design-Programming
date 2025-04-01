@@ -29,10 +29,10 @@ public class LibraryApp {
             System.out.println("6. Get Recommendation by Genre");
             System.out.println("7. Sort Order By Title");
             System.out.println("8. Find By Keyword");
-            System.out.println("8. Borrow Book");
-            System.out.println("9. Return Book");
-            System.out.println("10. List Borrowers");
-            System.out.println("11. Quit");
+            System.out.println("9. Borrow Book");
+            System.out.println("10. Return Book");
+            System.out.println("11. List Borrowers");
+            System.out.println("12. Quit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
             sc.nextLine(); // Consume newline

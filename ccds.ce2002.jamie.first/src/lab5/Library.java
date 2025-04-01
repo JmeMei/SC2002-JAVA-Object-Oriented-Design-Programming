@@ -4,11 +4,11 @@ import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class Library<T> {
-    private List<T> items;
-    private Set<String> genres;
-    private Map<String, List<Book>> authorMap;
-    private Map<String, Borrower> borrowers;
+public class Library<T> { //Java generics
+    private List<T> items; //ArrayList
+    private Set<String> genres; //HashSet
+    private Map<String, List<Book>> authorMap; //HashMap
+    private Map<String, Borrower> borrowers; //HashMap
 
     // Constructor
     public Library() {
@@ -18,12 +18,12 @@ public class Library<T> {
         this.borrowers = new HashMap<>();
     }
 
-    // Add an item to the library
+    // Add an item to the library, 
     public void addItem(T item) {
         items.add(item);
-        if (item instanceof Book) {
+        if (item instanceof Book) { //this item is a book
             Book book = (Book) item;
-            genres.add(book.getGenre());
+            genres.add(book.getGenre()); //add the book genre to this.genre (HashSet)
 
             // Add to authorMap
             authorMap.computeIfAbsent(book.getAuthor(), k -> new ArrayList<>()).add(book);
